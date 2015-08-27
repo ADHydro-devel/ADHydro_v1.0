@@ -1,0 +1,85 @@
+#
+#  Options for Linux with Intel Fortran for Yellowstone
+#
+
+# COMPILERF90	=	mpif90
+# FREESOURCE	=	-free
+# F90FLAGS	=       -convert big_endian -g -O0 -check all,noshape,nopointer,noarg_temp_created -mp -fpe0
+# MODFLAG	=	-I
+# LDFLAGS	=	
+# CPP		=	cpp
+# CPPFLAGS	=	-C -P -traditional # -D_HRLDAS_URBAN_
+# LIBS		=	
+# LIBJASPER      =       -ljpeg -ljasper
+# BZIP2          =       YES
+# BZIP2_INCLUDE  =       
+# BZIP2_LIB      =       -lbz2
+# RM		= 	rm -f
+# CC		=	mpicc
+
+#
+#  Options for Linux with Intel Fortran for Mt Moran
+#
+
+# COMPILERF90	=	ifort
+# FREESOURCE	=	-free
+# F90FLAGS	=       -convert big_endian -g -O0 -check all,noshape,nopointer,noarg_temp_created -mp -fpe0
+# MODFLAG	=	-I
+# LDFLAGS	=	
+# CPP		=	cpp
+# CPPFLAGS	=	-C -P -traditional # -D_HRLDAS_URBAN_
+# LIBS		=	
+# LIBJASPER      =       -ljpeg -L/apps/JASPER/intel-15.0/1.900.1/lib -ljasper
+# INCJASPER      =       -I/apps/JASPER/intel-15.0/1.900.1/include
+# NETCDFMOD	=	-I/apps/NetCDF-mpi/intel/15.0.0/4.3.2/include
+# NETCDFLIB	=	-L/apps/NetCDF-mpi/intel/15.0.0/4.3.2/lib -L/apps/HDF5-mpi/intel/15.0.0/1.8.13/lib -Wl,--start-group -lnetcdf -lnetcdff -lhdf5_hl -lhdf5 -Wl,--end-group -lcurl
+# BZIP2          =       NO
+# BZIP2_INCLUDE  =       
+# BZIP2_LIB      =       # -lbz2
+# RM		= 	rm -f
+# CC		=	mpicc
+
+#
+#  Options for Linux with gfortran for EN3038 lab
+#
+
+ COMPILERF90	=	mpif90
+ FREESOURCE	=	-ffree-form  -ffree-line-length-none
+ F90FLAGS	=       -g -fconvert=big-endian -fbounds-check -fno-range-check
+ MODFLAG	=	-I
+ LDFLAGS	=	
+ CPP		=	cpp
+ CPPFLAGS	=	-C -P -traditional # -D_HRLDAS_URBAN_
+ LIBS		=	
+ LIBJASPER     =       -ljpeg -ljasper
+ INCJASPER     =       
+ NETCDFMOD	=	-I/opt/include
+ NETCDFLIB	=	-L/opt/lib64 -Wl,--start-group -lnetcdf -lnetcdff -lhdf5_hl -lhdf5 -Wl,--end-group -lcurl
+ BZIP2		=       YES
+ BZIP2_LIB	=       -lbz2
+ BZIP2_INCLUDE	=       -I/usr/include
+ RM		= 	rm -f
+ CC		=	mpicc
+
+#
+#  Options for Linux with pgf90
+#
+
+# COMPILERF90	=	pgf90
+# FREESOURCE	=	-Mfree
+# F90FLAGS	=       -g -byteswapio 
+# MODFLAG	=	-I
+# LDFLAGS	=	
+# CPP		=	cpp
+# CPPFLAGS	=	-C -P -traditional # -D_HRLDAS_URBAN_
+# LIBS		=	
+# LIBJASPER     =       -ljpeg -L/usr/lib -ljasper
+# INCJASPER     =       -I/usr/include
+# NETCDFMOD      =       -I/usr/local/netcdf4-pgi/include
+# NETCDFLIB      =       -L/usr/local/netcdf4-pgi/lib -lnetcdf -lnetcdff
+# BZIP2          =       YES
+# BZIP2_LIB      =       -lbz2
+# BZIP2_INCLUDE  =       -I/usr/include
+# RM             =       rm -f
+# CC             =       cc
+
